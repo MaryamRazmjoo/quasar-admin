@@ -15,15 +15,15 @@ export default function () {
     layoutHeaderNavTabs: true,
     layoutHeaderNavTabsModel: 1,
 
-    layoutLeftDrawer: true,
+    layoutLeftDrawer: false,
     layoutLeftDrawerVisible: true,
     layoutLeftDrawerBehavior: 'default',
     layoutLeftDrawerOverlay: false,
     layoutLeftDrawerElevated: false,
     layoutLeftDrawerBordered: false,
 
-    layoutRightDrawer: true,
-    layoutRightDrawerVisible: true,
+    layoutRightDrawer: false,
+    layoutRightDrawerVisible: false,
     layoutRightDrawerBehavior: 'default',
     layoutRightDrawerOverlay: false,
     layoutRightDrawerElevated: false,

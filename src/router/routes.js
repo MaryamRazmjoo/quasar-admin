@@ -41,6 +41,16 @@ const routes = [
             ]
           },
           {
+            path: 'contents',
+            component: () => import('pages/Admin/index'),
+            children: [
+              { name: 'Admin.Content.Index', path: '', component: () => import('pages/Admin/Content/Index') },
+              { name: 'Admin.Content.Create', path: 'create', component: () => import('pages/Admin/Content/Create') },
+              { name: 'Admin.Content.Show', path: ':id', component: () => import('pages/Admin/Content/Show') },
+              { name: 'Admin.Content.Edit', path: ':id/edit', component: () => import('pages/Admin/Content/Edit') }
+            ]
+          },
+          {
             path: 'orders',
             component: () => import('pages/Admin/index'),
             children: [
@@ -64,10 +74,11 @@ const routes = [
             path: 'sets',
             component: () => import('pages/Admin/index'),
             children: [
-              { name: 'Admin.Product.Index', path: '', component: () => import('pages/Admin/Sets/Index') },
-              { name: 'Admin.Product.Create', path: 'create', component: () => import('pages/Admin/Sets/Create') },
-              { name: 'Admin.Product.Show', path: ':id', component: () => import('pages/Admin/Sets/Show') },
-              { name: 'Admin.Product.Edit', path: ':id/edit', component: () => import('pages/Admin/Sets/Edit') }]
+              { name: 'Admin.Set.Index', path: '', component: () => import('pages/Admin/Sets/Index') },
+              { name: 'Admin.Set.Create', path: 'create', component: () => import('pages/Admin/Sets/Create') },
+              { name: 'Admin.Set.Show', path: ':id', component: () => import('pages/Admin/Sets/Show') },
+              { name: 'Admin.Set.Edit', path: ':id/edit', component: () => import('pages/Admin/Sets/Edit') }
+            ]
           },
           {
             path: 'coupon',

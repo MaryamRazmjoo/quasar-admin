@@ -9,7 +9,7 @@ import axios from 'axios'
 // for each client)
 const api = axios.create({ baseURL: 'https://api.example.com' })
 
-export default boot(({ app, store, router }) => {
+export default boot(({ app, store }) => {
   const accessToken = store.getters['Auth/accessToken']
   if (accessToken) {
     axios.defaults.headers.common.Authorization = 'Bearer ' + accessToken
@@ -24,4 +24,5 @@ export default boot(({ app, store, router }) => {
   // ^ ^ ^ this will allow you to use this.$api (for Vue Options API form)
   //       so you can easily perform requests against your app's API
 })
+
 export { api }
